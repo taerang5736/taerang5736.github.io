@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITNESS LOG - 식단 관리</title>
+<style>
+/* CSS 스타일은 index.html과 100% 동일하게 복사 (동그라미 제거됨) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "맑은 고딕", sans-serif; background-color: #ffffff; color: #1a1a1a; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+header { width: 100%; padding: 25px 50px; background: #fff; border-bottom: 1px solid #eeeeee; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; z-index: 1000; }
+.logo { font-size: 1.6em; font-weight: 800; font-style: italic; letter-spacing: 3px; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+nav ul li a { font-size: 0.9em; font-weight: 700; color: #888; transition: 0.3s; padding: 10px 5px; }
+nav ul li a.active { color: #000; border-bottom: 2px solid #000; }
+.container { max-width: 1200px; margin: 120px auto 50px; overflow: auto; padding: 0 20px; }
+.main-content { float: left; width: 75%; padding-right: 40px; border-right: 1px solid #eeeeee; min-height: 500px; }
+.sidebar { float: left; width: 25%; padding-left: 40px; }
+h2 { font-size: 1.4em; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 8px; text-transform: uppercase; }
+.diet-grid { display: flex; gap: 10px; margin-top: 15px; }
+.diet-box { flex: 1; border: 1px solid #eee; padding: 15px; text-align: center; }
+.diet-box span { display: block; font-size: 1.2em; font-weight: bold; }
+@media (max-width: 900px) { .main-content, .sidebar { width: 100%; float: none; border: none; padding: 0; } }
+</style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">FITNESS LOG</a>
+    <nav>
+        <ul>
+           <li><a href="index routine.html">운동 루틴</a></li>
+            <li><a href="index diet.html">식단 관리</a></li>
+            <li><a href="index item.html">운동 장비 추천</a></li>
+            <li><a href="index progress.html">신체 변화</a></li>
+            <li><a href="index goals.html">나의 목표</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="main-content">
+        <h2>DIET MANAGEMENT</h2>
+        <p>일일 영양 섭취 가이드입니다. 탄단지 비율을 균형있게 유지하세요.</p>
+        <div class="diet-grid">
+            <div class="diet-box">칼로리<span>2,400 kcal</span></div>
+            <div class="diet-box">탄수화물<span>270 g</span></div>
+            <div class="diet-box">단백질<span>150 g</span></div>
+            <div class="diet-box">지방<span>60 g</span></div>
+        </div>
+        <p style="margin-top: 30px;">- <strong>아침</strong>: 오트밀 60g, 닭가슴살 100g<br>- <strong>점심</strong>: 현미밥 200g, 소고기 150g, 야채<br>- <strong>저녁</strong>: 고구마 150g, 닭가슴살 120g, 샐러드</p>
+    </div>
+    <aside class="sidebar">
+        <h3 style="margin-bottom: 15px; font-size: 1.1em;">DIET RULE</h3>
+        <p style="color: #666; font-size: 0.9em;">정해진 시간에 규칙적으로 식사하는 습관이 대사를 원활하게 합니다.</p>
+    </div>
+</div>
+</body>
+</html>

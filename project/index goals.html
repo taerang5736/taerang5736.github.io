@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITNESS LOG - 나의 목표</title>
+<style>
+/* 1. 글로벌 스타일 (모든 페이지 100% 동일 레이아웃) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "맑은 고딕", sans-serif; background-color: #ffffff; color: #1a1a1a; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* 상단 헤더: 좌측 로고 / 우측 메뉴 (일관성 유지) */
+header { width: 100%; padding: 25px 50px; background: #fff; border-bottom: 1px solid #eeeeee; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; z-index: 1000; }
+.logo { font-size: 1.6em; font-weight: 800; font-style: italic; letter-spacing: 3px; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+nav ul li a { font-size: 0.9em; font-weight: 700; color: #888; transition: 0.3s; padding: 10px 5px; }
+nav ul li a:hover { color: #000; }
+
+/* 🌟 현재 활성화된 탭 (나의 목표) */
+nav ul li a.active { color: #000; border-bottom: 2px solid #000; }
+
+/* 메인 레이아웃 (75% / 25% 구조 일치) */
+.container { max-width: 1200px; margin: 120px auto 50px; overflow: auto; padding: 0 20px; }
+.main-content { float: left; width: 75%; padding-right: 40px; border-right: 1px solid #eeeeee; min-height: 500px; }
+.sidebar { float: left; width: 25%; padding-left: 40px; }
+
+/* 콘텐츠 컴포넌트 */
+h2 { font-size: 1.4em; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 8px; text-transform: uppercase; }
+
+/* 목표 레이아웃 보완 (2단 그리드 및 레이아웃 정리) */
+.goal-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px; align-items: start; }
+.goal-data { display: flex; flex-direction: column; gap: 35px; }
+.goal-block { border: 1px solid #eeeeee; padding: 25px; border-radius: 4px; }
+.goal-highlight { font-size: 3.5em; font-weight: 800; margin-bottom: 5px; letter-spacing: -2px; line-height: 1; }
+.goal-label { font-size: 0.95em; font-weight: bold; color: #1a1a1a; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* 이미지 박스 스타일 */
+.image-box { border: 1px solid #eeeeee; padding: 15px; border-radius: 4px; text-align: center; background: #faf8f5; }
+.image-box img { width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto; filter: grayscale(100%); }
+.image-caption { font-size: 0.85em; color: #888; margin-top: 10px; font-style: italic; }
+
+@media (max-width: 900px) {
+    header { position: static; flex-direction: column; padding: 20px; }
+    nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+    .main-content, .sidebar { width: 100%; float: none; border: none; padding: 0; }
+    .goal-container { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">FITNESS LOG</a>
+    <nav>
+        <ul>
+            <li><a href="index routine.html">운동 루틴</a></li>
+            <li><a href="index diet.html">식단 관리</a></li>
+            <li><a href="index item.html">운동 장비 추천</a></li>
+            <li><a href="index progress.html">신체 변화</a></li>
+            <li><a href="index goals.html">나의 목표</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="main-content">
+        <h2>MY FINAL GOALS</h2>
+        <p>상반기 트레이닝을 통해 달성하고자 하는 최종 신체 지표 및 실행 마일스톤입니다.</p>
+        
+        <div class="goal-container">
+            <div class="goal-data">
+                <div class="goal-block">
+                    <div class="goal-highlight">10%</div>
+                    <div class="goal-label">Target Body Fat (체지방률)</div>
+                </div>
+                <div class="goal-block">
+                    <div class="goal-highlight">40kg</div>
+                    <div class="goal-label">Goal Skeletal Muscle Mass (골격근량)</div>
+                </div>
+            </div>
+            
+            <div class="image-box">
+                <img src="img/workout1.png" alt="Workout Motivation">
+                <div class="image-caption">대한민국 1등 보디빌더</div>
+                <ul style="list-style: none; text-align: left; margin-top: 20px; padding: 0 10px; font-size: 0.9em; color: #555;">
+                    <li style="margin-bottom: 10px;">• <strong>Routine Commitment</strong>: 주 5회 분할 루틴 엄수</li>
+                    <li style="margin-bottom: 10px;">• <strong>Progress Check-ins</strong>: 매주 인바디 데이터 측정</li>
+                    <li>• <strong>Consistency is Key</strong>: 정밀 식단 기록 및 클린 푸드 유지</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <h3 style="margin-bottom: 15px; font-size: 1.1em;">COMMITMENT</h3>
+        <p style="color: #666; font-size: 0.9em;">"조금씩, 하지만 확실하게." 단순한 수치 달성을 넘어 철저한 규칙과 자기 관리를 통해 완벽한 신체 밸런스를 구축하는 것이 최종 목표입니다.</p>
+    </div>
+</div>
+
+</body>
+</html>
