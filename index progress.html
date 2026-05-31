@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITNESS LOG - 신체 변화</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "맑은 고딕", sans-serif; background-color: #ffffff; color: #1a1a1a; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+header { width: 100%; padding: 25px 50px; background: #1a1a1a; border-bottom: 1px solid #2d2d2d; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; z-index: 1000; }
+.logo { font-size: 1.6em; font-weight: 800; font-style: italic; letter-spacing: 3px; color: #ffffff; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+nav ul li a { font-size: 0.9em; font-weight: 700; color: #aaaaaa; transition: 0.3s; padding: 10px 5px; }
+nav ul li a:hover { color: #ffffff; }
+nav ul li a.active { color: #ffffff; border-bottom: 2px solid #ffffff; }
+.container { max-width: 1200px; margin: 120px auto 50px; overflow: auto; padding: 0 20px; }
+.main-content { float: left; width: 75%; padding-right: 40px; border-right: 1px solid #eeeeee; min-height: 500px; }
+.sidebar { float: left; width: 25%; padding-left: 40px; }
+h2 { font-size: 1.4em; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 8px; text-transform: uppercase; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th { background: #f9f9f9; padding: 15px; border-bottom: 2px solid #000; text-align: left; font-size: 0.95em; }
+td { padding: 15px; border-bottom: 1px solid #eeeeee; font-size: 0.9em; }
+@media (max-width: 900px) { header { position: static; flex-direction: column; padding: 20px; } nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; } .main-content, .sidebar { width: 100%; float: none; border: none; padding: 0; } }
+</style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">FITNESS LOG</a>
+    <nav>
+        <ul>
+            <li><a href="index routine.html">운동 루틴</a></li>
+            <li><a href="index diet.html">식단 관리</a></li>
+            <li><a href="index item.html">운동 장비 추천</a></li>
+            <li><a href="index progress.html">신체 변화</a></li>
+            <li><a href="index goals.html">나의 목표</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="main-content">
+        <h2>BODY PROGRESS</h2>
+        <p>인바디 측정 데이터를 바탕으로 한 정량적인 신체 변화 기록 기록표입니다.</p>
+        <table>
+            <thead><tr><th>측정일</th><th>골격근량</th><th>체지방률</th></tr></thead>
+            <tbody>
+                <tr><td>3월 기록 (기초 측정)</td><td>32 kg</td><td>24 %</td></tr>
+                <tr><td>5월 기록 (중간 추적)</td><td>34 kg</td><td>22 %</td></tr>
+                <tr><td>현재 기록 (최근 갱신)</td><td>35 kg</td><td>20 %</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <aside class="sidebar">
+        <h3 style="margin-bottom: 15px; font-size: 1.1em;">ANALYTICS</h3>
+        <p style="color: #666; font-size: 0.9em;">꾸준한 데이터 트래킹은 슬럼프나 정체기를 정밀하게 돌파하는 강력한 밑거름이 됩니다.</p>
+   <div style="margin-top: 25px;">
+    <h4 style="font-size: 0.95em; margin-bottom: 8px; font-weight: bold; color: #1a1a1a;">실제 인바디 어플 참조</h4>
+    
+    <a>
+        <div style="border: 1px solid #000000; padding: 5px; background: #ffffff; border-radius: 4px; position: relative;">
+            <img src="img/progress.png" alt="동영상 섬네일" style="width: 100%; height: auto; display: block; filter: grayscale(100%);">
+            <div style="margin-top: 8px; font-size: 0.85em; color: #666666; text-align: center; font-style: italic;">
+            </div>
+        </div>
+    </a>
+</div>
+ </aside>
+</div>
+</body>
+</html>
